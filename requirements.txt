@@ -1,3 +1,4 @@
 # Local Ollama drafting uses Python's standard library; no pip packages are required.
 # Optional only for explicitly selected --provider openai:
 # python -m pip install "openai>=2.0.0,<3.0.0"
+psycopg[binary]>=3.2,<4
