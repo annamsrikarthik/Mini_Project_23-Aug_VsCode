@@ -1,0 +1,1542 @@
+{
+  "stage": "prioritized_qualification_without_llm",
+  "evaluation_date": "2026-10-03",
+  "ranking_rule": "Score descending, interaction date descending, original CSV order",
+  "summary": {
+    "total": 23,
+    "ready_for_scoring": 19,
+    "validation_needs_review": 4,
+    "qualified": 3,
+    "qualified_percentage": 13.04,
+    "review": 7,
+    "review_due_to_score": 3,
+    "review_due_to_data": 4,
+    "rejected": 13,
+    "leads_with_warnings": 7,
+    "common_rejection_reasons": [
+      {
+        "reason": "Last interaction is more than 30 days old",
+        "count": 13
+      },
+      {
+        "reason": "Outside target company size (20-500 employees)",
+        "count": 9
+      },
+      {
+        "reason": "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "count": 6
+      }
+    ],
+    "rejection_reason_note": "Counts are contributing factors among rejected leads; one lead may have multiple factors. The combined score determines rejection."
+  },
+  "priority_queue": [
+    {
+      "csv_row": 6,
+      "lead": {
+        "name": "Test_RecentEngagement",
+        "company": "Hot Lead Corp",
+        "company_size": "200",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 8,
+      "decision": "qualified",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 200: 4 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 8/10; decision qualified."
+      ],
+      "priority_rank": 1,
+      "rejection_reasons": [],
+      "next_action": "Prepare personalized outreach in priority order."
+    },
+    {
+      "csv_row": 10,
+      "lead": {
+        "name": "Test_MultipleInteractions",
+        "company": "Active Company",
+        "company_size": "500",
+        "industry": "Finance",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 8,
+      "decision": "qualified",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 500: 4 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 8/10; decision qualified."
+      ],
+      "priority_rank": 2,
+      "rejection_reasons": [],
+      "next_action": "Prepare personalized outreach in priority order."
+    },
+    {
+      "csv_row": 21,
+      "lead": {
+        "name": "Test_SMBAverage",
+        "company": "Average SMB Co",
+        "company_size": "120",
+        "industry": "Retail",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 8,
+      "decision": "qualified",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 120: 4 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 988 days ago: 0 points.",
+        "Including baseline 1: 8/10; decision qualified."
+      ],
+      "priority_rank": 3,
+      "rejection_reasons": [],
+      "next_action": "Prepare personalized outreach in priority order."
+    }
+  ],
+  "human_review": [
+    {
+      "csv_row": 5,
+      "lead": {
+        "name": "Test_StaleInteraction",
+        "company": "Old Company Inc",
+        "company_size": "100",
+        "industry": "Manufacturing",
+        "source": "Sales call",
+        "last_interaction_date": "2022-06-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 7,
+      "decision": "review",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 100: 4 points (target 20–500).",
+        "Source Sales call: 2 points.",
+        "Interaction 1571 days ago: 0 points.",
+        "Including baseline 1: 7/10; decision review."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Sales to assess fit and interest; score is in the review range."
+    },
+    {
+      "csv_row": 7,
+      "lead": {
+        "name": "Test_MissingDate",
+        "company": "Mystery Co",
+        "company_size": "150",
+        "industry": "Technology",
+        "source": "",
+        "last_interaction_date": ""
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "warnings": [],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 11,
+      "lead": {
+        "name": "Test_NoSourceInfo",
+        "company": "Source Unknown Corp",
+        "company_size": "300",
+        "industry": "Retail",
+        "source": "Unknown Source",
+        "last_interaction_date": "2024-01-18"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is not mapped in our rubric: Unknown Source."
+      ],
+      "warnings": [],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is not mapped in our rubric: Unknown Source."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 14,
+      "lead": {
+        "name": "Test_MissingName",
+        "company": "",
+        "company_size": "400",
+        "industry": "Consulting",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Missing company; do not invent it in an outreach draft."
+      ],
+      "score": 7,
+      "decision": "review",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 400: 4 points (target 20–500).",
+        "Source Sales call: 2 points.",
+        "Interaction 988 days ago: 0 points.",
+        "Including baseline 1: 7/10; decision review."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Sales to assess fit and interest; score is in the review range."
+    },
+    {
+      "csv_row": 15,
+      "lead": {
+        "name": "Test_NameOnly",
+        "company": "James Wilson",
+        "company_size": "NA",
+        "industry": "NA",
+        "source": "NA",
+        "last_interaction_date": "NA"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points.",
+        "Missing industry; do not invent it in an outreach draft."
+      ],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 16,
+      "lead": {
+        "name": "Test_PartialData",
+        "company": "Tech Partial",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is missing."
+      ],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points."
+      ],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is missing."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 17,
+      "lead": {
+        "name": "Test_WeekOldInteraction",
+        "company": "Week Old Corp",
+        "company_size": "250",
+        "industry": "Logistics",
+        "source": "Webinar attendee",
+        "last_interaction_date": "2024-01-13"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 6,
+      "decision": "review",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 1,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 250: 4 points (target 20–500).",
+        "Source Webinar attendee: 1 points.",
+        "Interaction 994 days ago: 0 points.",
+        "Including baseline 1: 6/10; decision review."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Sales to assess fit and interest; score is in the review range."
+    }
+  ],
+  "rejected_leads": [
+    {
+      "csv_row": 2,
+      "lead": {
+        "name": "Test_MissingSize",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 3,
+      "lead": {
+        "name": "Test_VeryLargeEnterprise",
+        "company": "Global Fortune 500 Corp",
+        "company_size": "50000",
+        "industry": "Enterprise Software",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 50000: 0 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 4,
+      "lead": {
+        "name": "Test_Solo",
+        "company": "John Doe Consulting",
+        "company_size": "1",
+        "industry": "Consulting",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 1,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 0,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 1: 0 points (target 20–500).",
+        "Source LinkedIn outreach: 0 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 1/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 8,
+      "lead": {
+        "name": "Test_UnknownIndustry",
+        "company": "Mysterious Startup",
+        "company_size": "15",
+        "industry": "Unknown Sector",
+        "source": "Referral",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 3,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 15: 0 points (target 20–500).",
+        "Source Referral: 2 points.",
+        "Interaction 988 days ago: 0 points.",
+        "Including baseline 1: 3/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 9,
+      "lead": {
+        "name": "Test_VeryRecentSignup",
+        "company": "Brand New Startup",
+        "company_size": "2",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 2: 0 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 12,
+      "lead": {
+        "name": "Test_HighValueMatch",
+        "company": "Perfect Fit Enterprise",
+        "company_size": "2000",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 2000: 0 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 13,
+      "lead": {
+        "name": "Test_LowValueNiche",
+        "company": "Niche Small Op",
+        "company_size": "5",
+        "industry": "Agriculture",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 1,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 0,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 5: 0 points (target 20–500).",
+        "Source LinkedIn outreach: 0 points.",
+        "Interaction 992 days ago: 0 points.",
+        "Including baseline 1: 1/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 18,
+      "lead": {
+        "name": "Test_MidMarketSoft",
+        "company": "Mid Market Software",
+        "company_size": "1500",
+        "industry": "SaaS",
+        "source": "Content download",
+        "last_interaction_date": "2024-01-18"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 2,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 1,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 1500: 0 points (target 20–500).",
+        "Source Content download: 1 points.",
+        "Interaction 989 days ago: 0 points.",
+        "Including baseline 1: 2/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 19,
+      "lead": {
+        "name": "Test_StartupShutdown",
+        "company": "Failed Startup",
+        "company_size": "8",
+        "industry": "SaaS",
+        "source": "Referral",
+        "last_interaction_date": "2023-05-01"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 3,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 8: 0 points (target 20–500).",
+        "Source Referral: 2 points.",
+        "Interaction 1251 days ago: 0 points.",
+        "Including baseline 1: 3/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 20,
+      "lead": {
+        "name": "Test_GovernmentBuyer",
+        "company": "Government Tech",
+        "company_size": "3000",
+        "industry": "Government",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-17"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 3,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 3000: 0 points (target 20–500).",
+        "Source Sales call: 2 points.",
+        "Interaction 990 days ago: 0 points.",
+        "Including baseline 1: 3/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 22,
+      "lead": {
+        "name": "",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-29"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points.",
+        "Missing name; do not invent it in an outreach draft."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 978 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 23,
+      "lead": {
+        "name": "Test_WRONG_DATE",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "1024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 366230 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 24,
+      "lead": {
+        "name": "Test_MissingIndustry",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points.",
+        "Missing industry; do not invent it in an outreach draft."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    }
+  ],
+  "leads": [
+    {
+      "csv_row": 2,
+      "lead": {
+        "name": "Test_MissingSize",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 3,
+      "lead": {
+        "name": "Test_VeryLargeEnterprise",
+        "company": "Global Fortune 500 Corp",
+        "company_size": "50000",
+        "industry": "Enterprise Software",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 50000: 0 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 4,
+      "lead": {
+        "name": "Test_Solo",
+        "company": "John Doe Consulting",
+        "company_size": "1",
+        "industry": "Consulting",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 1,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 0,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 1: 0 points (target 20–500).",
+        "Source LinkedIn outreach: 0 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 1/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 5,
+      "lead": {
+        "name": "Test_StaleInteraction",
+        "company": "Old Company Inc",
+        "company_size": "100",
+        "industry": "Manufacturing",
+        "source": "Sales call",
+        "last_interaction_date": "2022-06-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 7,
+      "decision": "review",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 100: 4 points (target 20–500).",
+        "Source Sales call: 2 points.",
+        "Interaction 1571 days ago: 0 points.",
+        "Including baseline 1: 7/10; decision review."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Sales to assess fit and interest; score is in the review range."
+    },
+    {
+      "csv_row": 6,
+      "lead": {
+        "name": "Test_RecentEngagement",
+        "company": "Hot Lead Corp",
+        "company_size": "200",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 8,
+      "decision": "qualified",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 200: 4 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 8/10; decision qualified."
+      ],
+      "priority_rank": 1,
+      "rejection_reasons": [],
+      "next_action": "Prepare personalized outreach in priority order."
+    },
+    {
+      "csv_row": 7,
+      "lead": {
+        "name": "Test_MissingDate",
+        "company": "Mystery Co",
+        "company_size": "150",
+        "industry": "Technology",
+        "source": "",
+        "last_interaction_date": ""
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "warnings": [],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 8,
+      "lead": {
+        "name": "Test_UnknownIndustry",
+        "company": "Mysterious Startup",
+        "company_size": "15",
+        "industry": "Unknown Sector",
+        "source": "Referral",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 3,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 15: 0 points (target 20–500).",
+        "Source Referral: 2 points.",
+        "Interaction 988 days ago: 0 points.",
+        "Including baseline 1: 3/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 9,
+      "lead": {
+        "name": "Test_VeryRecentSignup",
+        "company": "Brand New Startup",
+        "company_size": "2",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 2: 0 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 10,
+      "lead": {
+        "name": "Test_MultipleInteractions",
+        "company": "Active Company",
+        "company_size": "500",
+        "industry": "Finance",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 8,
+      "decision": "qualified",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 500: 4 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 8/10; decision qualified."
+      ],
+      "priority_rank": 2,
+      "rejection_reasons": [],
+      "next_action": "Prepare personalized outreach in priority order."
+    },
+    {
+      "csv_row": 11,
+      "lead": {
+        "name": "Test_NoSourceInfo",
+        "company": "Source Unknown Corp",
+        "company_size": "300",
+        "industry": "Retail",
+        "source": "Unknown Source",
+        "last_interaction_date": "2024-01-18"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is not mapped in our rubric: Unknown Source."
+      ],
+      "warnings": [],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is not mapped in our rubric: Unknown Source."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 12,
+      "lead": {
+        "name": "Test_HighValueMatch",
+        "company": "Perfect Fit Enterprise",
+        "company_size": "2000",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 2000: 0 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 13,
+      "lead": {
+        "name": "Test_LowValueNiche",
+        "company": "Niche Small Op",
+        "company_size": "5",
+        "industry": "Agriculture",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 1,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 0,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 5: 0 points (target 20–500).",
+        "Source LinkedIn outreach: 0 points.",
+        "Interaction 992 days ago: 0 points.",
+        "Including baseline 1: 1/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 14,
+      "lead": {
+        "name": "Test_MissingName",
+        "company": "",
+        "company_size": "400",
+        "industry": "Consulting",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Missing company; do not invent it in an outreach draft."
+      ],
+      "score": 7,
+      "decision": "review",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 400: 4 points (target 20–500).",
+        "Source Sales call: 2 points.",
+        "Interaction 988 days ago: 0 points.",
+        "Including baseline 1: 7/10; decision review."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Sales to assess fit and interest; score is in the review range."
+    },
+    {
+      "csv_row": 15,
+      "lead": {
+        "name": "Test_NameOnly",
+        "company": "James Wilson",
+        "company_size": "NA",
+        "industry": "NA",
+        "source": "NA",
+        "last_interaction_date": "NA"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points.",
+        "Missing industry; do not invent it in an outreach draft."
+      ],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 16,
+      "lead": {
+        "name": "Test_PartialData",
+        "company": "Tech Partial",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is missing."
+      ],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points."
+      ],
+      "score": null,
+      "decision": "review",
+      "score_breakdown": null,
+      "reasoning": [
+        "Lead source is missing."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Resolve scoring-data issues and reassess."
+    },
+    {
+      "csv_row": 17,
+      "lead": {
+        "name": "Test_WeekOldInteraction",
+        "company": "Week Old Corp",
+        "company_size": "250",
+        "industry": "Logistics",
+        "source": "Webinar attendee",
+        "last_interaction_date": "2024-01-13"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 6,
+      "decision": "review",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 1,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 250: 4 points (target 20–500).",
+        "Source Webinar attendee: 1 points.",
+        "Interaction 994 days ago: 0 points.",
+        "Including baseline 1: 6/10; decision review."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [],
+      "next_action": "Sales to assess fit and interest; score is in the review range."
+    },
+    {
+      "csv_row": 18,
+      "lead": {
+        "name": "Test_MidMarketSoft",
+        "company": "Mid Market Software",
+        "company_size": "1500",
+        "industry": "SaaS",
+        "source": "Content download",
+        "last_interaction_date": "2024-01-18"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 2,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 1,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 1500: 0 points (target 20–500).",
+        "Source Content download: 1 points.",
+        "Interaction 989 days ago: 0 points.",
+        "Including baseline 1: 2/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 19,
+      "lead": {
+        "name": "Test_StartupShutdown",
+        "company": "Failed Startup",
+        "company_size": "8",
+        "industry": "SaaS",
+        "source": "Referral",
+        "last_interaction_date": "2023-05-01"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 3,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 8: 0 points (target 20–500).",
+        "Source Referral: 2 points.",
+        "Interaction 1251 days ago: 0 points.",
+        "Including baseline 1: 3/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 20,
+      "lead": {
+        "name": "Test_GovernmentBuyer",
+        "company": "Government Tech",
+        "company_size": "3000",
+        "industry": "Government",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-17"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 3,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 2,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 3000: 0 points (target 20–500).",
+        "Source Sales call: 2 points.",
+        "Interaction 990 days ago: 0 points.",
+        "Including baseline 1: 3/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Outside target company size (20-500 employees)",
+        "Source earned fewer than 3 points (the maximum); the combined score was below the 5-point rejection threshold.",
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 21,
+      "lead": {
+        "name": "Test_SMBAverage",
+        "company": "Average SMB Co",
+        "company_size": "120",
+        "industry": "Retail",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [],
+      "score": 8,
+      "decision": "qualified",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 4,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size 120: 4 points (target 20–500).",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 988 days ago: 0 points.",
+        "Including baseline 1: 8/10; decision qualified."
+      ],
+      "priority_rank": 3,
+      "rejection_reasons": [],
+      "next_action": "Prepare personalized outreach in priority order."
+    },
+    {
+      "csv_row": 22,
+      "lead": {
+        "name": "",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-29"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points.",
+        "Missing name; do not invent it in an outreach draft."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 978 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 23,
+      "lead": {
+        "name": "Test_WRONG_DATE",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "1024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 366230 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    },
+    {
+      "csv_row": 24,
+      "lead": {
+        "name": "Test_MissingIndustry",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Company size is missing; score this factor as 0 points.",
+        "Missing industry; do not invent it in an outreach draft."
+      ],
+      "score": 4,
+      "decision": "rejected",
+      "score_breakdown": {
+        "baseline": 1,
+        "company_size": 0,
+        "source": 3,
+        "recency": 0
+      },
+      "reasoning": [
+        "Company size missing: 0 points.",
+        "Source Inbound demo request: 3 points.",
+        "Interaction 987 days ago: 0 points.",
+        "Including baseline 1: 4/10; decision rejected."
+      ],
+      "priority_rank": null,
+      "rejection_reasons": [
+        "Last interaction is more than 30 days old"
+      ],
+      "next_action": "Do not prioritize outreach for this campaign."
+    }
+  ]
+}

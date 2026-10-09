@@ -1,0 +1,25 @@
+{
+  "qualification_verified": true,
+  "total_leads": 100,
+  "decisions": {
+    "qualified": 35,
+    "review": 36,
+    "rejected": 29
+  },
+  "synthetic_cases_verified": 48,
+  "existing_rows_preserved": 52,
+  "combined_csv_sha256": "be20b45b8ef8342a106b810a19c11bf9c0677406f1385cb6e4633343745c86ec",
+  "outreach_verified": true,
+  "outreach": {
+    "provider": "ollama",
+    "model": "gemma3:4b",
+    "prompt_version": "discovery-v4",
+    "batch_size": 2,
+    "api_calls": 21,
+    "drafted": 35,
+    "failed": 0,
+    "setup_error": null
+  },
+  "failure_codes": {},
+  "outreach_report_sha256": "a0422b1ae327718bea96cf7022ee8232bb5db0468cd68adbaa27d628fc18430b"
+}

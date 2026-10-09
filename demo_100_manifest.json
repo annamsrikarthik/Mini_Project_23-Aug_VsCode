@@ -1,0 +1,130 @@
+{
+  "purpose": "Reproducible classroom scale demonstration; synthetic rows are not customers.",
+  "evaluation_date": "2024-01-20",
+  "source_files": [
+    {
+      "name": "leads_training.csv",
+      "rows": 29,
+      "sha256": "fca99e00817955ab189455fa321ce685631bcb5d34f39eb88d51765fa9a35042"
+    },
+    {
+      "name": "leads_testing.csv",
+      "rows": 23,
+      "sha256": "3dc3e64f10662884fe960b0cf467de5db0772bf45ea8dc2df61903655a3463c6"
+    }
+  ],
+  "source_rows_copied": 52,
+  "synthetic_rows_added": 48,
+  "total_rows": 100,
+  "synthetic_cases": [
+    {
+      "name": "minimum_target_demo_today",
+      "rows": 4,
+      "company_size": "20",
+      "source": "Inbound demo request",
+      "days_since_interaction": 0,
+      "expected_score": 10,
+      "expected_decision": "qualified"
+    },
+    {
+      "name": "maximum_target_referral_day30",
+      "rows": 4,
+      "company_size": "500",
+      "source": "Referral",
+      "days_since_interaction": 30,
+      "expected_score": 9,
+      "expected_decision": "qualified"
+    },
+    {
+      "name": "target_webinar_day30",
+      "rows": 4,
+      "company_size": "120",
+      "source": "Webinar attendee",
+      "days_since_interaction": 30,
+      "expected_score": 8,
+      "expected_decision": "qualified"
+    },
+    {
+      "name": "target_demo_day90",
+      "rows": 4,
+      "company_size": "75",
+      "source": "Inbound demo request",
+      "days_since_interaction": 90,
+      "expected_score": 9,
+      "expected_decision": "qualified"
+    },
+    {
+      "name": "just_over_target_demo",
+      "rows": 4,
+      "company_size": "501",
+      "source": "Inbound demo request",
+      "days_since_interaction": 0,
+      "expected_score": 6,
+      "expected_decision": "review"
+    },
+    {
+      "name": "just_below_target_referral",
+      "rows": 4,
+      "company_size": "19",
+      "source": "Referral",
+      "days_since_interaction": 0,
+      "expected_score": 5,
+      "expected_decision": "review"
+    },
+    {
+      "name": "target_content_day91",
+      "rows": 4,
+      "company_size": "150",
+      "source": "Content download",
+      "days_since_interaction": 91,
+      "expected_score": 6,
+      "expected_decision": "review"
+    },
+    {
+      "name": "missing_size_demo",
+      "rows": 4,
+      "company_size": "NA",
+      "source": "Inbound demo request",
+      "days_since_interaction": 0,
+      "expected_score": 6,
+      "expected_decision": "review"
+    },
+    {
+      "name": "small_linkedin_day91",
+      "rows": 4,
+      "company_size": "10",
+      "source": "LinkedIn outreach",
+      "days_since_interaction": 91,
+      "expected_score": 1,
+      "expected_decision": "rejected"
+    },
+    {
+      "name": "large_content_day90",
+      "rows": 4,
+      "company_size": "1000",
+      "source": "Content download",
+      "days_since_interaction": 90,
+      "expected_score": 3,
+      "expected_decision": "rejected"
+    },
+    {
+      "name": "small_salescall_day91",
+      "rows": 4,
+      "company_size": "15",
+      "source": "Sales call",
+      "days_since_interaction": 91,
+      "expected_score": 3,
+      "expected_decision": "rejected"
+    },
+    {
+      "name": "small_webinar_today",
+      "rows": 4,
+      "company_size": "12",
+      "source": "Webinar attendee",
+      "days_since_interaction": 0,
+      "expected_score": 4,
+      "expected_decision": "rejected"
+    }
+  ],
+  "combined_csv_sha256": "be20b45b8ef8342a106b810a19c11bf9c0677406f1385cb6e4633343745c86ec"
+}

@@ -1,0 +1,418 @@
+{
+  "stage": "validation_only",
+  "evaluation_date": "2024-01-20",
+  "summary": {
+    "total": 29,
+    "ready_for_scoring": 29,
+    "needs_review": 0,
+    "leads_with_warnings": 0
+  },
+  "leads": [
+    {
+      "csv_row": 2,
+      "lead": {
+        "name": "Alice Chen",
+        "company": "CloudScale AI",
+        "company_size": "50",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 3,
+      "lead": {
+        "name": "Bob Rodriguez",
+        "company": "TechVentures Inc",
+        "company_size": "8",
+        "industry": "SaaS",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 4,
+      "lead": {
+        "name": "Carol Singh",
+        "company": "National Bank Corp",
+        "company_size": "5000",
+        "industry": "Finance",
+        "source": "Content download",
+        "last_interaction_date": "2023-12-01"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 5,
+      "lead": {
+        "name": "David Moore",
+        "company": "StartupXYZ",
+        "company_size": "3",
+        "industry": "SaaS",
+        "source": "Referral",
+        "last_interaction_date": "2024-01-18"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 6,
+      "lead": {
+        "name": "Emma Thompson",
+        "company": "RetailWorks Solutions",
+        "company_size": "200",
+        "industry": "Retail",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2023-11-10"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 7,
+      "lead": {
+        "name": "Frank Liu",
+        "company": "Healthcare Systems Ltd",
+        "company_size": "1200",
+        "industry": "Healthcare",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-12"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 8,
+      "lead": {
+        "name": "Grace Lee",
+        "company": "Manufacturing Co",
+        "company_size": "450",
+        "industry": "Manufacturing",
+        "source": "Webinar attendee",
+        "last_interaction_date": "2023-10-05"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 9,
+      "lead": {
+        "name": "Henry Park",
+        "company": "EdTech Innovations",
+        "company_size": "75",
+        "industry": "EdTech",
+        "source": "Content download",
+        "last_interaction_date": "2024-01-14"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 10,
+      "lead": {
+        "name": "Iris Patel",
+        "company": "Logistics Global",
+        "company_size": "800",
+        "industry": "Logistics",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2023-09-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 11,
+      "lead": {
+        "name": "Jack White",
+        "company": "Digital Marketing Agency",
+        "company_size": "120",
+        "industry": "Marketing",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 12,
+      "lead": {
+        "name": "Karen Miller",
+        "company": "InsurancePro",
+        "company_size": "600",
+        "industry": "Insurance",
+        "source": "Sales call",
+        "last_interaction_date": "2023-12-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 13,
+      "lead": {
+        "name": "Leon Chen",
+        "company": "FinTech Startup",
+        "company_size": "25",
+        "industry": "FinTech",
+        "source": "Referral",
+        "last_interaction_date": "2024-01-17"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 14,
+      "lead": {
+        "name": "Maya Desai",
+        "company": "Agricultural Tech",
+        "company_size": "45",
+        "industry": "Agriculture",
+        "source": "Content download",
+        "last_interaction_date": "2024-01-16"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 15,
+      "lead": {
+        "name": "Nathan Brooks",
+        "company": "Enterprise Solutions Corp",
+        "company_size": "3500",
+        "industry": "Software",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-13"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 16,
+      "lead": {
+        "name": "Olivia Garcia",
+        "company": "Local Restaurant Group",
+        "company_size": "12",
+        "industry": "Hospitality",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2023-08-30"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 17,
+      "lead": {
+        "name": "Pamela White",
+        "company": "Pharma Research Inc",
+        "company_size": "2200",
+        "industry": "Pharmaceuticals",
+        "source": "Sales call",
+        "last_interaction_date": "2023-11-25"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 18,
+      "lead": {
+        "name": "Quinn Matthews",
+        "company": "Consulting Firm",
+        "company_size": "180",
+        "industry": "Consulting",
+        "source": "Webinar attendee",
+        "last_interaction_date": "2024-01-11"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 19,
+      "lead": {
+        "name": "Rachel Kim",
+        "company": "Government Agency",
+        "company_size": "800",
+        "industry": "Government",
+        "source": "Content download",
+        "last_interaction_date": "2023-12-10"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 20,
+      "lead": {
+        "name": "Samuel Lee",
+        "company": "Cybersecurity Startup",
+        "company_size": "60",
+        "industry": "Cybersecurity",
+        "source": "Referral",
+        "last_interaction_date": "2024-01-09"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 21,
+      "lead": {
+        "name": "Tina Patel",
+        "company": "Energy Solutions",
+        "company_size": "900",
+        "industry": "Energy",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2023-10-18"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 22,
+      "lead": {
+        "name": "Uma Singh",
+        "company": "Event Planning Co",
+        "company_size": "35",
+        "industry": "Events",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-08"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 23,
+      "lead": {
+        "name": "Victor Moore",
+        "company": "Real Estate Platform",
+        "company_size": "250",
+        "industry": "Real Estate",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-06"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 24,
+      "lead": {
+        "name": "Wendy Zhang",
+        "company": "Fashion Brand",
+        "company_size": "400",
+        "industry": "Retail",
+        "source": "Content download",
+        "last_interaction_date": "2024-01-05"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 25,
+      "lead": {
+        "name": "Xavier Lopez",
+        "company": "Data Analytics Firm",
+        "company_size": "110",
+        "industry": "Analytics",
+        "source": "Webinar attendee",
+        "last_interaction_date": "2023-12-22"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 26,
+      "lead": {
+        "name": "Yuki Tanaka",
+        "company": "Travel Technology",
+        "company_size": "55",
+        "industry": "Travel",
+        "source": "Referral",
+        "last_interaction_date": "2024-01-04"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 27,
+      "lead": {
+        "name": "Zara Hassan",
+        "company": "Education Institution",
+        "company_size": "600",
+        "industry": "Education",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2023-12-05"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 28,
+      "lead": {
+        "name": "Aaron Benj",
+        "company": "Supply Chain Co",
+        "company_size": "320",
+        "industry": "Supply Chain",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-02"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 29,
+      "lead": {
+        "name": "Bella Cross",
+        "company": "Legal Services Firm",
+        "company_size": "90",
+        "industry": "Legal",
+        "source": "Sales call",
+        "last_interaction_date": "2023-11-30"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 30,
+      "lead": {
+        "name": "Cassandra Jones",
+        "company": "Media & Entertainment",
+        "company_size": "150",
+        "industry": "Media",
+        "source": "Content download",
+        "last_interaction_date": "2024-01-01"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

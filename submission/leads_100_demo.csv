@@ -1,0 +1,101 @@
+name,company,company_size,industry,source,last_interaction_date
+Alice Chen,CloudScale AI,50,SaaS,Inbound demo request,2024-01-15
+Bob Rodriguez,TechVentures Inc,8,SaaS,LinkedIn outreach,2024-01-20
+Carol Singh,National Bank Corp,5000,Finance,Content download,2023-12-01
+David Moore,StartupXYZ,3,SaaS,Referral,2024-01-18
+Emma Thompson,RetailWorks Solutions,200,Retail,Inbound demo request,2023-11-10
+Frank Liu,Healthcare Systems Ltd,1200,Healthcare,Sales call,2024-01-12
+Grace Lee,Manufacturing Co,450,Manufacturing,Webinar attendee,2023-10-05
+Henry Park,EdTech Innovations,75,EdTech,Content download,2024-01-14
+Iris Patel,Logistics Global,800,Logistics,LinkedIn outreach,2023-09-20
+Jack White,Digital Marketing Agency,120,Marketing,Inbound demo request,2024-01-19
+Karen Miller,InsurancePro,600,Insurance,Sales call,2023-12-15
+Leon Chen,FinTech Startup,25,FinTech,Referral,2024-01-17
+Maya Desai,Agricultural Tech,45,Agriculture,Content download,2024-01-16
+Nathan Brooks,Enterprise Solutions Corp,3500,Software,Inbound demo request,2024-01-13
+Olivia Garcia,Local Restaurant Group,12,Hospitality,LinkedIn outreach,2023-08-30
+Pamela White,Pharma Research Inc,2200,Pharmaceuticals,Sales call,2023-11-25
+Quinn Matthews,Consulting Firm,180,Consulting,Webinar attendee,2024-01-11
+Rachel Kim,Government Agency,800,Government,Content download,2023-12-10
+Samuel Lee,Cybersecurity Startup,60,Cybersecurity,Referral,2024-01-09
+Tina Patel,Energy Solutions,900,Energy,Inbound demo request,2023-10-18
+Uma Singh,Event Planning Co,35,Events,LinkedIn outreach,2024-01-08
+Victor Moore,Real Estate Platform,250,Real Estate,Sales call,2024-01-06
+Wendy Zhang,Fashion Brand,400,Retail,Content download,2024-01-05
+Xavier Lopez,Data Analytics Firm,110,Analytics,Webinar attendee,2023-12-22
+Yuki Tanaka,Travel Technology,55,Travel,Referral,2024-01-04
+Zara Hassan,Education Institution,600,Education,Inbound demo request,2023-12-05
+Aaron Benj,Supply Chain Co,320,Supply Chain,LinkedIn outreach,2024-01-02
+Bella Cross,Legal Services Firm,90,Legal,Sales call,2023-11-30
+Cassandra Jones,Media & Entertainment,150,Media,Content download,2024-01-01
+Test_MissingSize,Test Inc,NA,SaaS,Inbound demo request,2024-01-20
+Test_VeryLargeEnterprise,Global Fortune 500 Corp,50000,Enterprise Software,Inbound demo request,2024-01-20
+Test_Solo,John Doe Consulting,1,Consulting,LinkedIn outreach,2024-01-20
+Test_StaleInteraction,Old Company Inc,100,Manufacturing,Sales call,2022-06-15
+Test_RecentEngagement,Hot Lead Corp,200,SaaS,Inbound demo request,2024-01-20
+Test_MissingDate,Mystery Co,150,Technology,,
+Test_UnknownIndustry,Mysterious Startup,15,Unknown Sector,Referral,2024-01-19
+Test_VeryRecentSignup,Brand New Startup,2,SaaS,Inbound demo request,2024-01-20
+Test_MultipleInteractions,Active Company,500,Finance,Inbound demo request,2024-01-20
+Test_NoSourceInfo,Source Unknown Corp,300,Retail,Unknown Source,2024-01-18
+Test_HighValueMatch,Perfect Fit Enterprise,2000,SaaS,Inbound demo request,2024-01-20
+Test_LowValueNiche,Niche Small Op,5,Agriculture,LinkedIn outreach,2024-01-15
+Test_MissingName,,400,Consulting,Sales call,2024-01-19
+Test_NameOnly,James Wilson,NA,NA,NA,NA
+Test_PartialData,Tech Partial,NA,SaaS,,2024-01-20
+Test_WeekOldInteraction,Week Old Corp,250,Logistics,Webinar attendee,2024-01-13
+Test_MidMarketSoft,Mid Market Software,1500,SaaS,Content download,2024-01-18
+Test_StartupShutdown,Failed Startup,8,SaaS,Referral,2023-05-01
+Test_GovernmentBuyer,Government Tech,3000,Government,Sales call,2024-01-17
+Test_SMBAverage,Average SMB Co,120,Retail,Inbound demo request,2024-01-19
+,Test Inc,NA,SaaS,Inbound demo request,2024-01-29
+Test_WRONG_DATE,Test Inc,NA,SaaS,Inbound demo request,1024-01-20
+Test_MissingIndustry,Test Inc,NA,,Inbound demo request,2024-01-20
+ScaleDemo_001,Sample Company 001,20,SaaS,Inbound demo request,2024-01-20
+ScaleDemo_002,Sample Company 002,20,Finance,Inbound demo request,2024-01-20
+ScaleDemo_003,Sample Company 003,20,Retail,Inbound demo request,2024-01-20
+ScaleDemo_004,Sample Company 004,20,Logistics,Inbound demo request,2024-01-20
+ScaleDemo_005,Sample Company 005,500,SaaS,Referral,2023-12-21
+ScaleDemo_006,Sample Company 006,500,Finance,Referral,2023-12-21
+ScaleDemo_007,Sample Company 007,500,Retail,Referral,2023-12-21
+ScaleDemo_008,Sample Company 008,500,Logistics,Referral,2023-12-21
+ScaleDemo_009,Sample Company 009,120,SaaS,Webinar attendee,2023-12-21
+ScaleDemo_010,Sample Company 010,120,Finance,Webinar attendee,2023-12-21
+ScaleDemo_011,Sample Company 011,120,Retail,Webinar attendee,2023-12-21
+ScaleDemo_012,Sample Company 012,120,Logistics,Webinar attendee,2023-12-21
+ScaleDemo_013,Sample Company 013,75,SaaS,Inbound demo request,2023-10-22
+ScaleDemo_014,Sample Company 014,75,Finance,Inbound demo request,2023-10-22
+ScaleDemo_015,Sample Company 015,75,Retail,Inbound demo request,2023-10-22
+ScaleDemo_016,Sample Company 016,75,Logistics,Inbound demo request,2023-10-22
+ScaleDemo_017,Sample Company 017,501,SaaS,Inbound demo request,2024-01-20
+ScaleDemo_018,Sample Company 018,501,Finance,Inbound demo request,2024-01-20
+ScaleDemo_019,Sample Company 019,501,Retail,Inbound demo request,2024-01-20
+ScaleDemo_020,Sample Company 020,501,Logistics,Inbound demo request,2024-01-20
+ScaleDemo_021,Sample Company 021,19,SaaS,Referral,2024-01-20
+ScaleDemo_022,Sample Company 022,19,Finance,Referral,2024-01-20
+ScaleDemo_023,Sample Company 023,19,Retail,Referral,2024-01-20
+ScaleDemo_024,Sample Company 024,19,Logistics,Referral,2024-01-20
+ScaleDemo_025,Sample Company 025,150,SaaS,Content download,2023-10-21
+ScaleDemo_026,Sample Company 026,150,Finance,Content download,2023-10-21
+ScaleDemo_027,Sample Company 027,150,Retail,Content download,2023-10-21
+ScaleDemo_028,Sample Company 028,150,Logistics,Content download,2023-10-21
+ScaleDemo_029,Sample Company 029,NA,SaaS,Inbound demo request,2024-01-20
+ScaleDemo_030,Sample Company 030,NA,Finance,Inbound demo request,2024-01-20
+ScaleDemo_031,Sample Company 031,NA,Retail,Inbound demo request,2024-01-20
+ScaleDemo_032,Sample Company 032,NA,Logistics,Inbound demo request,2024-01-20
+ScaleDemo_033,Sample Company 033,10,SaaS,LinkedIn outreach,2023-10-21
+ScaleDemo_034,Sample Company 034,10,Finance,LinkedIn outreach,2023-10-21
+ScaleDemo_035,Sample Company 035,10,Retail,LinkedIn outreach,2023-10-21
+ScaleDemo_036,Sample Company 036,10,Logistics,LinkedIn outreach,2023-10-21
+ScaleDemo_037,Sample Company 037,1000,SaaS,Content download,2023-10-22
+ScaleDemo_038,Sample Company 038,1000,Finance,Content download,2023-10-22
+ScaleDemo_039,Sample Company 039,1000,Retail,Content download,2023-10-22
+ScaleDemo_040,Sample Company 040,1000,Logistics,Content download,2023-10-22
+ScaleDemo_041,Sample Company 041,15,SaaS,Sales call,2023-10-21
+ScaleDemo_042,Sample Company 042,15,Finance,Sales call,2023-10-21
+ScaleDemo_043,Sample Company 043,15,Retail,Sales call,2023-10-21
+ScaleDemo_044,Sample Company 044,15,Logistics,Sales call,2023-10-21
+ScaleDemo_045,Sample Company 045,12,SaaS,Webinar attendee,2024-01-20
+ScaleDemo_046,Sample Company 046,12,Finance,Webinar attendee,2024-01-20
+ScaleDemo_047,Sample Company 047,12,Retail,Webinar attendee,2024-01-20
+ScaleDemo_048,Sample Company 048,12,Logistics,Webinar attendee,2024-01-20

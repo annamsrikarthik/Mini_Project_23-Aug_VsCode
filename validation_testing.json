@@ -1,0 +1,310 @@
+{
+  "stage": "validation_only",
+  "evaluation_date": "2024-01-20",
+  "summary": {
+    "total": 20,
+    "ready_for_scoring": 15,
+    "needs_review": 5,
+    "leads_with_warnings": 2
+  },
+  "leads": [
+    {
+      "csv_row": 2,
+      "lead": {
+        "name": "Test_MissingSize",
+        "company": "Test Inc",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Company size is missing."
+      ],
+      "warnings": []
+    },
+    {
+      "csv_row": 3,
+      "lead": {
+        "name": "Test_VeryLargeEnterprise",
+        "company": "Global Fortune 500 Corp",
+        "company_size": "50000",
+        "industry": "Enterprise Software",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 4,
+      "lead": {
+        "name": "Test_Solo",
+        "company": "John Doe Consulting",
+        "company_size": "1",
+        "industry": "Consulting",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 5,
+      "lead": {
+        "name": "Test_StaleInteraction",
+        "company": "Old Company Inc",
+        "company_size": "100",
+        "industry": "Manufacturing",
+        "source": "Sales call",
+        "last_interaction_date": "2022-06-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 6,
+      "lead": {
+        "name": "Test_RecentEngagement",
+        "company": "Hot Lead Corp",
+        "company_size": "200",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 7,
+      "lead": {
+        "name": "Test_MissingDate",
+        "company": "Mystery Co",
+        "company_size": "150",
+        "industry": "Technology",
+        "source": "",
+        "last_interaction_date": ""
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "warnings": []
+    },
+    {
+      "csv_row": 8,
+      "lead": {
+        "name": "Test_UnknownIndustry",
+        "company": "Mysterious Startup",
+        "company_size": "15",
+        "industry": "Unknown Sector",
+        "source": "Referral",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 9,
+      "lead": {
+        "name": "Test_VeryRecentSignup",
+        "company": "Brand New Startup",
+        "company_size": "2",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 10,
+      "lead": {
+        "name": "Test_MultipleInteractions",
+        "company": "Active Company",
+        "company_size": "500",
+        "industry": "Finance",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 11,
+      "lead": {
+        "name": "Test_NoSourceInfo",
+        "company": "Source Unknown Corp",
+        "company_size": "300",
+        "industry": "Retail",
+        "source": "Unknown Source",
+        "last_interaction_date": "2024-01-18"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Lead source is not mapped in our rubric: Unknown Source."
+      ],
+      "warnings": []
+    },
+    {
+      "csv_row": 12,
+      "lead": {
+        "name": "Test_HighValueMatch",
+        "company": "Perfect Fit Enterprise",
+        "company_size": "2000",
+        "industry": "SaaS",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 13,
+      "lead": {
+        "name": "Test_LowValueNiche",
+        "company": "Niche Small Op",
+        "company_size": "5",
+        "industry": "Agriculture",
+        "source": "LinkedIn outreach",
+        "last_interaction_date": "2024-01-15"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 14,
+      "lead": {
+        "name": "Test_MissingName",
+        "company": "",
+        "company_size": "400",
+        "industry": "Consulting",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": [
+        "Missing company; do not invent it in an outreach draft."
+      ]
+    },
+    {
+      "csv_row": 15,
+      "lead": {
+        "name": "Test_NameOnly",
+        "company": "James Wilson",
+        "company_size": "NA",
+        "industry": "NA",
+        "source": "NA",
+        "last_interaction_date": "NA"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Company size is missing.",
+        "Lead source is missing.",
+        "Last interaction date is missing."
+      ],
+      "warnings": [
+        "Missing industry; do not invent it in an outreach draft."
+      ]
+    },
+    {
+      "csv_row": 16,
+      "lead": {
+        "name": "Test_PartialData",
+        "company": "Tech Partial",
+        "company_size": "NA",
+        "industry": "SaaS",
+        "source": "",
+        "last_interaction_date": "2024-01-20"
+      },
+      "validation_status": "review",
+      "issues": [
+        "Company size is missing.",
+        "Lead source is missing."
+      ],
+      "warnings": []
+    },
+    {
+      "csv_row": 17,
+      "lead": {
+        "name": "Test_WeekOldInteraction",
+        "company": "Week Old Corp",
+        "company_size": "250",
+        "industry": "Logistics",
+        "source": "Webinar attendee",
+        "last_interaction_date": "2024-01-13"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 18,
+      "lead": {
+        "name": "Test_MidMarketSoft",
+        "company": "Mid Market Software",
+        "company_size": "1500",
+        "industry": "SaaS",
+        "source": "Content download",
+        "last_interaction_date": "2024-01-18"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 19,
+      "lead": {
+        "name": "Test_StartupShutdown",
+        "company": "Failed Startup",
+        "company_size": "8",
+        "industry": "SaaS",
+        "source": "Referral",
+        "last_interaction_date": "2023-05-01"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 20,
+      "lead": {
+        "name": "Test_GovernmentBuyer",
+        "company": "Government Tech",
+        "company_size": "3000",
+        "industry": "Government",
+        "source": "Sales call",
+        "last_interaction_date": "2024-01-17"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "csv_row": 21,
+      "lead": {
+        "name": "Test_SMBAverage",
+        "company": "Average SMB Co",
+        "company_size": "120",
+        "industry": "Retail",
+        "source": "Inbound demo request",
+        "last_interaction_date": "2024-01-19"
+      },
+      "validation_status": "ready_for_scoring",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}
