@@ -1,16 +1,16 @@
 # My FDE Training Log
 
-> **Current direction — October 6, 2026:** The user selected local Gemma
-> `gemma3:4b` through Ollama for outreach, with no API key required. The audited
-> 100-lead run produced 35 drafts without failures; user/sales review remains. Use
-> [OUTREACH_SETUP.md](OUTREACH_SETUP.md) for current commands. Earlier OpenAI next
-> steps are preserved as history and superseded for this stage. RAG, agents, and
-> cloud portfolio work require separate planning. Current testing data has 23
-> leads (5 qualified, 13 review, 5 rejected at `2024-01-20`); missing company size
-> retains the user's warning plus zero-points behavior.
+> **Current direction — October 11, 2026:** The original assignment is complete:
+> the audited 100-lead run produced 35 qualified drafts, 36 human-review decisions,
+> and 29 rejections with no drafting failures. The project is now in the first
+> portfolio extension: PostgreSQL storage and SQL analytics. The local
+> MiniProject_FDE database has seven related tables, business constraints, and
+> operational indexes. Python-to-PostgreSQL connectivity is verified. A
+> transactional JSON importer is implemented; its 100-lead dry run is the next
+> verification step. Salesforce integration follows the database increment.
 
 **Project started:** 2026-09-29
-**Last updated:** 2026-10-06
+**Last updated:** 2026-10-11
 **Python experience:** Comfortable writing small programs.
 **Learning approach:** Guided project work, with explanations and small checks of understanding.
 
@@ -38,6 +38,13 @@ The user selected Salesforce Trial Edition. Working interpretation: Salesforce C
 - [x] Implement missing-data handling, safe API failures, and bounded retries.
 - [x] Demonstrate 100 leads processed in one CLI run without manual intervention.
 - [x] Prepare source code, sample data, output report, and a one-page README.
+- [x] Design and create the seven-table PostgreSQL schema.
+- [x] Add database constraints and operational indexes.
+- [x] Verify Python connectivity to PostgreSQL with all seven tables present.
+- [x] Implement the transactional PostgreSQL JSON importer.
+- [ ] Run and verify the 100-lead PostgreSQL dry run.
+- [ ] Commit the verified 100-lead database import.
+- [ ] Build and validate SQL analytics queries.
 
 ## Constraints and evidence
 
@@ -51,8 +58,10 @@ The user selected Salesforce Trial Edition. Working interpretation: Salesforce C
 
 ## Next learning step
 
-Review the five diverse draft samples and the prepared submission package. The
-100-lead demonstration and audit are complete; messages are not approved for use.
+Run postgres_store.py with --dry-run against outreach_100_demo.json. Verify
+100 total occurrences, 35 qualified, 36 review, 29 rejected, two identity-review
+occurrences, and 35 drafts while confirming that all changes are rolled back.
+After that, commit the real import and build the SQL analytics queries.
 
 ## Historical learning checkpoint — initial validation
 
@@ -169,3 +178,43 @@ Formal curriculum exercises have not been assessed. Project milestones above tra
 - No bulk campaign was sent. The remaining reviewed examples are unsent.
 - Core assignment implementation and submission evidence are complete.
 - Next portfolio increment: PostgreSQL data model and SQL reporting, followed by Salesforce API integration.
+
+## 2026-10-11 — PostgreSQL schema and Python connection checkpoint
+
+- Created local PostgreSQL 18 database MiniProject_FDE and verified the public schema.
+- Designed seven tables: processing_runs, input_files, leads, lead_occurrences,
+  qualification_results, outreach_drafts, and review_events.
+- Extended the original one-file design so one program run can contain multiple
+  input files.
+- Separated canonical lead identity from file occurrences. The project rule uses
+  normalized lead name plus company name as the canonical identity. Repeated
+  appearances share one lead_id; every source appearance keeps its own
+  lead_occurrence_id.
+- Records missing lead name or company are preserved as occurrences with a null
+  lead_id and identity_status = review_required; the source CSV is not changed.
+- Added generated normalized name/company columns, primary and foreign keys,
+  uniqueness rules, rubric point checks, score-to-decision checks, and safe
+  draft/review state constraints.
+- Added five operational indexes for lead history, qualification lookup, priority
+  queue, draft review backlog, and review history.
+- Added two partial unique indexes preventing repeated approval and sent events
+  for the same draft. Multiple edit events remain allowed.
+- Chose one current draft per qualification result. Draft versioning was discussed
+  and intentionally excluded; edits, reviewer name, edited content, notes, and
+  timestamps are retained in review_events.
+- Tested a complete seven-table Alice workflow and used it to identify duplicate
+  approval behavior. Removed all committed demonstration data and confirmed all
+  seven tables returned to zero rows.
+- Added Psycopg 3 as the PostgreSQL driver in requirements.txt.
+- Added database_check.py; verified connection to MiniProject_FDE as postgres,
+  PostgreSQL 18.6, public schema, and all seven required tables.
+- Added postgres_store.py. It maps the saved 100-lead JSON report into the seven
+  tables using one transaction, reuses canonical leads, preserves raw records,
+  stores qualification decisions and outreach drafts, and supports --dry-run.
+- Verified the new Python files compile successfully. Live importer verification
+  remains pending.
+- Expected dry-run result: 100 total, 35 qualified, 36 review, 29 rejected,
+  two identity-review occurrences, 35 drafts, and committed = false.
+- Portfolio plan remains six focused increments over ten days: PostgreSQL/SQL,
+  FastAPI plus Salesforce, RAG, agent workflow, multimodal intake, and deployment
+  with evaluation and demonstration.
