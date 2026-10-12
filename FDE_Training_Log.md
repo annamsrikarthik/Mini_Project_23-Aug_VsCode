@@ -218,3 +218,30 @@ Formal curriculum exercises have not been assessed. Project milestones above tra
 - Portfolio plan remains six focused increments over ten days: PostgreSQL/SQL,
   FastAPI plus Salesforce, RAG, agent workflow, multimodal intake, and deployment
   with evaluation and demonstration.
+
+
+## 2026-10-12 — PostgreSQL import and analytics verified
+
+- Restored the PostgreSQL connection environment in the VS Code PowerShell session and reverified the MiniProject_FDE database.
+- Ran postgres_store.py with --dry-run against outreach_100_demo.json. The full transaction processed 100 records, 35 qualified, 36 review, 29 rejected, two identity-review occurrences, and 35 drafts, then rolled back successfully.
+- Confirmed the existing permanent import belongs to completed run_id 2 and input file leads_100_demo.csv with 100 records.
+- Verified committed table counts: one processing run, one input file, 98 canonical leads, 100 lead occurrences, 100 qualification results, 35 outreach drafts, and zero review events.
+- Explained why 98 canonical leads represent 100 occurrences: two occurrences lack the complete name-and-company identity required for a canonical lead.
+- Verified ten read-only PostgreSQL analytics reports covering decision mix, score ranges, source performance, company-size performance, recency, qualified sales priority, the human-review queue, rejection reasons, draft workflow state, and data quality.
+- Confirmed five review records have NULL scores because required scoring information is missing, unmapped, or invalid. The other 31 review records have valid scores from 5 through 7.
+- Clarified that issues and warnings are structured validation signals, while reasoning is the human-readable score explanation. Empty issue or warning arrays do not mean reasoning is absent.
+- Added analytics_queries.sql containing the ten reviewed reports and an explicit unmapped-source and future-date check.
+- Current database state: the 100-lead import is committed; all 35 Gemma drafts remain drafted, require sales review, and are unsent.
+- Next portfolio action: connect PostgreSQL persistence to the main Python command flow, then prepare the API/Salesforce increment.
+
+## 2026-10-12 — Main command PostgreSQL integration implemented
+
+- Added optional --save-postgres and --postgres-dry-run flags to main.py.
+- The normal CSV-to-JSON workflow remains unchanged unless --save-postgres is selected.
+- The integrated command records the actual input CSV filename and uses the same atomic postgres_store.py transaction.
+- A database failure preserves the generated JSON report and exits with code 3; outreach drafting failures continue to use exit code 2.
+- Verified the new command-line options, parsed main.py and postgres_store.py successfully, and reran the existing 20-test suite with all tests passing.
+- Ran an isolated integration test with a fake PostgreSQL loader. It verified that main.py passes the saved report, input filename, and dry-run setting correctly without touching the live database.
+- Updated README.md with connection verification, safe integrated dry-run, permanent-save commands, and execution-record behavior.
+- Next: run the integrated command against the live database with --postgres-dry-run, verify the table counts remain unchanged, and then decide whether a new committed test run is needed.
+

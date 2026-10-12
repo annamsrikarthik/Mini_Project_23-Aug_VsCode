@@ -43,3 +43,39 @@ review wording and facts. No emails are sent.
 ## Human-reviewed samples
 
 Five edited outreach examples are available in reviewed_sample_drafts.md. One controlled delivery test reached Gmail Spam; no bulk campaign was sent. Production delivery requires separate sender-authentication and reputation checks.
+
+## Save a run to PostgreSQL
+
+The optional PostgreSQL path uses the standard `PGHOST`, `PGPORT`,
+`PGDATABASE`, `PGUSER`, and `PGPASSWORD` environment variables. Verify the
+connection and seven-table schema first:
+
+```powershell
+.\.venv\Scripts\python.exe database_check.py
+```
+
+Test the complete Python-to-PostgreSQL flow without retaining any rows:
+
+```powershell
+.\.venv\Scripts\python.exe main.py leads_testing.csv `
+    --as-of 2024-01-20 `
+    --output qualification_testing.json `
+    --save-postgres `
+    --postgres-dry-run
+```
+
+After verifying the dry-run summary, omit `--postgres-dry-run` to commit one
+new processing run:
+
+```powershell
+.\.venv\Scripts\python.exe main.py leads_testing.csv `
+    --as-of 2024-01-20 `
+    --output qualification_testing.json `
+    --save-postgres
+```
+
+Each committed command execution intentionally creates a new row in
+`processing_runs` and preserves every input occurrence. A failed database save
+does not remove the JSON report. PostgreSQL failures return exit code 3;
+incomplete outreach drafting returns exit code 2. The reviewed read-only SQL
+reports are in [analytics_queries.sql](analytics_queries.sql).

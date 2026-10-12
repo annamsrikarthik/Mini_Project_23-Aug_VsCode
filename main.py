@@ -1,5 +1,6 @@
 """Read a leads CSV, validate and score its records, rank qualified leads, and save decisions and summaries as JSON.
 With --draft-outreach, use local Ollama (Gemma 3) to draft emails for sales review; no messages are sent.
+With --save-postgres, also persist the completed report to PostgreSQL.
 """
 
 import argparse
@@ -245,6 +246,16 @@ def main():
     parser.add_argument("--max-attempts", type=int, choices=range(1, 6), default=3)
     parser.add_argument("--product-context", type=Path,
                         default=Path(__file__).resolve().with_name("product_context.md"))
+    parser.add_argument(
+        "--save-postgres",
+        action="store_true",
+        help="Persist this completed report to PostgreSQL using the PG environment variables",
+    )
+    parser.add_argument(
+        "--postgres-dry-run",
+        action="store_true",
+        help="Exercise the PostgreSQL load and roll it back; requires --save-postgres",
+    )
     args = parser.parse_args()
     if not 1 <= args.request_timeout <= 1800:
         parser.error("Request timeout must be 1-1800 seconds.")
@@ -252,6 +263,8 @@ def main():
         parser.error("Output must be a different file from the input CSV.")
     if args.draft_outreach and args.product_context.resolve() == args.output.resolve():
         parser.error("Output must be a different file from the product context.")
+    if args.postgres_dry_run and not args.save_postgres:
+        parser.error("--postgres-dry-run requires --save-postgres.")
 
     try:
         leads = qualify_records(load_and_validate(args.input, args.as_of), args.as_of)
@@ -272,6 +285,38 @@ def main():
 
     print(json.dumps(report["summary"], indent=2))
     print(f"Qualification report saved to {args.output}")
+
+    if args.save_postgres:
+        try:
+            import psycopg
+            from postgres_store import load_report
+        except ImportError as error:
+            parser.exit(
+                3,
+                "PostgreSQL save unavailable; the JSON report is safe. "
+                f"Install the project requirements and retry: {error}\n",
+            )
+
+        try:
+            postgres_summary = load_report(
+                args.output,
+                source_file=args.input.name,
+                dry_run=args.postgres_dry_run,
+            )
+        except (OSError, UnicodeError, ValueError, json.JSONDecodeError,
+                psycopg.Error) as error:
+            parser.exit(
+                3,
+                "PostgreSQL save failed; the JSON report is safe. "
+                f"{error}\n",
+            )
+
+        print(json.dumps({"postgres": postgres_summary}, indent=2))
+        if args.postgres_dry_run:
+            print("PostgreSQL dry run passed; database changes were rolled back.")
+        else:
+            print("PostgreSQL save committed successfully.")
+
     if args.draft_outreach:
         print(json.dumps(report["outreach_summary"], indent=2))
         if report["outreach_summary"]["failed"]:
