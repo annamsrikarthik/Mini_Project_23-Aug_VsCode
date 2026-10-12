@@ -245,3 +245,13 @@ Formal curriculum exercises have not been assessed. Project milestones above tra
 - Updated README.md with connection verification, safe integrated dry-run, permanent-save commands, and execution-record behavior.
 - Next: run the integrated command against the live database with --postgres-dry-run, verify the table counts remain unchanged, and then decide whether a new committed test run is needed.
 
+## 2026-10-12 — Integrated PostgreSQL run committed
+
+- Ran main.py against leads_testing.csv with --save-postgres and first verified the full 23-record load using --postgres-dry-run.
+- The dry run produced 5 qualified, 13 review, 5 rejected, two identity-review occurrences, zero drafts, and committed = false; all existing database counts remained unchanged.
+- Re-ran the same integrated command without --postgres-dry-run and committed the execution successfully.
+- Verified final database counts: two processing runs, two input files, 98 canonical leads, 123 lead occurrences, 123 qualification results, 35 outreach drafts, and zero review events.
+- The canonical lead count remained 98 because the 23 testing leads already existed in the 100-lead demonstration; the new execution correctly created new occurrences and results while reusing identities.
+- PostgreSQL persistence is now part of the normal Python command flow and the database/analytics portfolio increment is complete.
+- Next portfolio increment: introduce a small FastAPI service over the existing qualification and PostgreSQL layers, then prepare a Salesforce integration boundary without sending or modifying external CRM data during initial tests.
+
